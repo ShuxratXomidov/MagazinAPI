@@ -77,6 +77,22 @@ namespace MagazinAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Age = 31,
+                            FirstName = "Shuxrat",
+                            LastName = "Xomidov"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Age = 32,
+                            FirstName = "Maruf",
+                            LastName = "Ergashev"
+                        });
                 });
 #pragma warning restore 612, 618
         }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MagazinAPI.Models;
+using Bogus;
 
 namespace MagazinAPI.Controllers
 {
@@ -28,6 +29,17 @@ namespace MagazinAPI.Controllers
 
             return product;
         }
+
+        [HttpGet]
+        [Route("")]
+        public IActionResult Index()
+        {
+            //create fake product
+
+            var faker = new Faker<Product> ("en");
+            .RuleFor(p => p.Name, f = f.Commerce.Product())
+        }
+
 
         [HttpGet]
         [Route("")]  //api/Product
