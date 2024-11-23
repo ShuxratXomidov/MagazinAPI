@@ -19,17 +19,17 @@ namespace MagazinAPI.Controllers
 
         [HttpPost]
         [Route("")]  //api/User
-        public string Create()
+        public IActionResult Create([FromBody] UserCreateRequest newUser)
         {
             User user = new User();
-            user.FirstName = "Shuxrat";
-            user.LastName = "Xomidov";
-            user.Age = 31;
+            user.FirstName = newUser.FirstName;
+            user.LastName = newUser.LastName;
+            user.Age = newUser.Age;
 
             dbContext.Users.Add(user);
             dbContext.SaveChanges();
 
-            return "Ok";
+            return Ok(user);
         }
 
         [HttpGet]
@@ -43,7 +43,7 @@ namespace MagazinAPI.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public string Update(int id)
+        public string Update([FromRoute]int id)
         {
             var user = dbContext.Users.FirstOrDefault(user => user.Id == id);
             if (user == null)
@@ -60,7 +60,7 @@ namespace MagazinAPI.Controllers
 
         [HttpDelete]
         [Route("{id}")]
-        public string Delete(int id)
+        public string Delete([FromRoute]int id)
         {
             var user = dbContext.Users.FirstOrDefault(user => user.Id == id);
 

@@ -40,7 +40,7 @@ namespace MagazinAPI.Controllers
 
         [HttpPut]
         [Route("{id}")]  //api/Product/id
-        public string Update(int id)
+        public string Update([FromRoute] int id)
         {
             var product = dbContext.Products.FirstOrDefault(p => p.Id == id);
             if (product == null)
@@ -56,7 +56,7 @@ namespace MagazinAPI.Controllers
 
         [HttpDelete]
         [Route("{id}")]  //api/Product/id
-        public string Delete(int id)
+        public string Delete([FromRoute] int id)
         {
             var product = dbContext.Products.FirstOrDefault(p => p.Id == id);
             if (product == null)

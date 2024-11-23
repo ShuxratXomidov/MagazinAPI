@@ -108,3 +108,4 @@ D:\Project\MagazinAPI\MagazinAPI\obj\Debug\net8.0\refint\MagazinAPI.dll
 D:\Project\MagazinAPI\MagazinAPI\obj\Debug\net8.0\MagazinAPI.pdb
 D:\Project\MagazinAPI\MagazinAPI\obj\Debug\net8.0\MagazinAPI.genruntimeconfig.cache
 D:\Project\MagazinAPI\MagazinAPI\obj\Debug\net8.0\ref\MagazinAPI.dll
+D:\Project\MagazinAPI\MagazinAPI\obj\Debug\net8.0\MagazinAPI.sourcelink.json

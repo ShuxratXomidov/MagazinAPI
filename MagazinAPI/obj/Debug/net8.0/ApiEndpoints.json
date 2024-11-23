@@ -1,5 +1,77 @@
 [
   {
+    "ContainingType": "MagazinAPI.Controllers.CategoryController",
+    "Method": "BTest",
+    "RelativePath": "api/Category/{a}/{word}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "a",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "word",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "q",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagazinAPI.Controllers.CategoryController",
+    "Method": "ATest",
+    "RelativePath": "api/Category/a-test/{b}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "b",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "c",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "x",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "MagazinAPI.Controllers.ProductController",
     "Method": "Create",
     "RelativePath": "api/Product",
@@ -98,18 +170,14 @@
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "newUser",
+        "Type": "MagazinAPI.Models.UserCreateRequest",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "MagazinAPI.Controllers.UserController",
